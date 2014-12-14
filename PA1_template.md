@@ -129,9 +129,9 @@ cat("New Median Value is", newMedian)
 ```
 ## New Median Value is 10766.19
 ```
+## Are there differences in activity patterns between weekdays and weekends?
 
 ```r
-## Are there differences in activity patterns between weekdays and weekends?
 #1. Create a new factor variable in the dataset with two levels - "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
 newActivity$date <- as.Date(newActivity$date)
 newActivity$typeofday <- ifelse(((weekdays(newActivity$date, abbreviate = F) %in% c('Saturday', 'Sunday'))), 'weekend', 'weekday')

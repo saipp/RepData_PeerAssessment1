@@ -128,8 +128,10 @@ cat(&quot;New Mean Value is&quot;, newMean)</code></pre>
 <pre><code>## New Mean Value is 10766.19</code></pre>
 <pre class="r"><code>cat(&quot;New Median Value is&quot;, newMedian)</code></pre>
 <pre><code>## New Median Value is 10766.19</code></pre>
-<pre class="r"><code>## Are there differences in activity patterns between weekdays and weekends?
-#1. Create a new factor variable in the dataset with two levels - &quot;weekday&quot; and &quot;weekend&quot; indicating whether a given date is a weekday or weekend day.
+</div>
+<div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
+<h2>Are there differences in activity patterns between weekdays and weekends?</h2>
+<pre class="r"><code>#1. Create a new factor variable in the dataset with two levels - &quot;weekday&quot; and &quot;weekend&quot; indicating whether a given date is a weekday or weekend day.
 newActivity$date &lt;- as.Date(newActivity$date)
 newActivity$typeofday &lt;- ifelse(((weekdays(newActivity$date, abbreviate = F) %in% c('Saturday', 'Sunday'))), 'weekend', 'weekday')
 newActivity$typeofday &lt;- as.factor(newActivity$typeofday)
